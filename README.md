@@ -1,147 +1,95 @@
-# Brazilian Population Census 2022
-## Integrated National Dataset of Census Tract Aggregates
+# Doutorado em Engenharia Urbana | Urban Engineering PhD Research
 
-### Overview
+**Dados, métodos computacionais e análises espaciais aplicados ao déficit habitacional no Brasil**
 
-This dataset integrates publicly available census tract-level
-aggregates from the Brazilian Population Census 2022, produced
-by the Instituto Brasileiro de Geografia e Estatística (IBGE).
+Este repositório reúne códigos, procedimentos metodológicos, documentação e produtos de pesquisa desenvolvidos no âmbito do doutorado em Engenharia Urbana da Universidade Federal de São Carlos (UFSCar).
 
-The integrated database was prepared to support reproducible
-spatial analysis of demographic, socioeconomic, and
-housing-related characteristics across Brazil.
+A pesquisa investiga a aplicação de métodos computacionais e inteligência artificial à estimativa e desagregação espacial do déficit habitacional brasileiro, com ênfase na escala dos setores censitários.
 
-This is a research-derived integration of official IBGE data,
-not an official dataset published by IBGE.
+## Projeto de pesquisa
 
-### Dataset structure
+**Título:** IA aplicada à estimativa do déficit habitacional no Brasil: abordagem multiescalar de desagregação por setor censitário.
 
-- Geographic coverage: Brazil
-- Reference year: 2022
-- Spatial unit: Census tract (setor censitário)
-- Number of records: 468,099
-- Number of columns: 1,356
-- Geographic identifier: CD_SETOR
-- Data format: Apache Parquet
+**Pesquisadora:** Priscila Kauana Barelli Forcel
 
-The database includes 29 identification and territorial
-characterization fields, 9 basic statistical indicators,
-and 1,318 thematic variables.
+**Instituição:** Universidade Federal de São Carlos (UFSCar)
 
-### Integrated sources
+**Programa:** Programa de Pós-Graduação em Engenharia Urbana (PPGEU)
 
-| Code | Dataset | Variables |
-|---|---|---:|
-| BASICO | Basic and territorial information | 38 columns |
-| DOM1 | Household Characteristics - Part 1 | 89 |
-| DOM2 | Household Characteristics - Part 2 | 406 |
-| DOM3 | Household Characteristics - Part 3 | 148 |
-| DEM | Demography | 36 |
-| PAR | Household Relationships | 182 |
-| COR | Color or Race | 95 |
-| ALF | Literacy | 362 |
+**Financiamento:** Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) — Processo nº 2025/08490-4.
 
-The listed variable counts for thematic datasets exclude
-the common census tract identifier.
+**Vinculação científica:** Centro de Estudos da Favela (CEFAVELA), associado ao processo FAPESP nº 2022/12259-8.
 
-Mortality, Indigenous-specific, and Quilombola-specific
-thematic datasets are not included in this release.
+## Objetivos
 
-### Data processing
+A pesquisa busca desenvolver e avaliar procedimentos metodológicos para ampliar o detalhamento territorial das estimativas do déficit habitacional no Brasil.
 
-The processing workflow comprises:
+Entre as principais frentes de investigação estão:
 
-1. Acquisition of official IBGE CSV archives.
-2. Standardization of census tract identifiers.
-3. Conversion of source datasets to Apache Parquet.
-4. Preservation of thematic variable prefixes.
-5. Integration using CD_SETOR as the unique key.
-6. Preservation of all census tracts in the Basic dataset.
-7. Consolidation of integration batches into a national file.
-8. Validation against the processed source datasets.
+- Integração e tratamento de bases de dados demográficos, socioeconômicos e territoriais.
+- Desagregação espacial de indicadores habitacionais das Áreas de Ponderação para os setores censitários.
+- Aplicação de métodos estatísticos, aprendizado de máquina e inteligência artificial interpretável.
+- Análise da distribuição territorial das necessidades habitacionais e de suas relações com desigualdades socioeconômicas.
+- Desenvolvimento de procedimentos transparentes e reproduzíveis para apoiar a pesquisa e o planejamento habitacional.
 
-The national database was integrated using a left join
-strategy with the Basic dataset as the territorial reference.
+## Projetos e bases de dados
 
-### Data coverage and missing values
+### 01 — Censo Demográfico 2022: Universo
 
-The Basic dataset contains 468,099 census tracts.
+**Status:** Banco nacional integrado e auditado; documentação e publicação científica em preparação.
 
-The thematic datasets contain 458,772 census tracts.
-The remaining 9,327 census tracts are retained in the
-integrated database, with null values in all thematic fields.
+Integração dos agregados por setores censitários do Censo Demográfico 2022, disponibilizados pelo Instituto Brasileiro de Geografia e Estatística (IBGE).
 
-Original values were preserved as text during processing.
-The statistical disclosure control marker X must not be
-interpreted as zero or as a missing join value.
+O banco produzido reúne:
 
-Numerical conversion, including treatment of decimal commas,
-must be performed according to the requirements of each analysis.
+- 468.099 setores censitários de todo o Brasil.
+- 1.356 colunas, incluindo identificação territorial e variáveis temáticas.
+- Dados básicos, características dos domicílios, demografia, parentesco, cor ou raça e alfabetização.
+- Dicionário integrado das variáveis e relatórios de validação.
 
-### Validation
+As verificações realizadas não identificaram divergências entre os valores do banco integrado e os arquivos Parquet tratados utilizados como fontes.
 
-The integrated database was compared against the eight
-processed Parquet source datasets.
+**[Acessar o projeto 01_BR_UNIVERSO](./01_BR_UNIVERSO/)**
 
-Validation results:
+Outros projetos, procedimentos metodológicos e produtos científicos poderão ser incorporados ao repositório conforme o desenvolvimento da pesquisa.
 
-- 1,355 data variables compared.
-- Zero value discrepancies identified.
-- 468,099 unique census tract records.
-- 9,327 Basic-only census tracts verified.
-- Zero non-null thematic values in those Basic-only tracts.
+## Ferramentas e tecnologias
 
-These checks establish consistency between the integrated
-database and the processed source files. They do not
-independently certify the accuracy of the original IBGE
-statistics or all upstream processing decisions.
+Os procedimentos computacionais utilizam principalmente:
 
-### Documentation files
+- Python e Google Colab.
+- Pandas, PyArrow e DuckDB.
+- Formatos CSV, Excel e Apache Parquet.
+- Ferramentas de análise estatística e espacial, conforme as necessidades de cada etapa da pesquisa.
 
-- DICIONARIO_COMPLETO_2022.csv
-- DICIONARIO_COMPLETO_2022.xlsx
-- RELATORIO_VARIAVEIS_2022.csv
-- RESUMO_VALIDACAO_2022.csv
-- VALIDACAO_SETORES_EXCLUSIVOS_2022.csv
+## Fontes de dados
 
-The integrated data dictionary includes variable identifiers,
-source groups, thematic classifications, and descriptions.
+As fontes utilizadas na pesquisa incluem bases públicas oficiais, com destaque para o Instituto Brasileiro de Geografia e Estatística (IBGE).
 
-The territorial field descriptions should be checked against
-the corresponding IBGE methodological documentation before
-final public release.
+Cada projeto apresenta sua documentação específica, identificação das fontes, procedimentos de processamento, verificações e limitações.
 
-### Official data source
+Os produtos derivados disponibilizados neste repositório não constituem publicações oficiais das instituições responsáveis pelos dados originais.
 
-Instituto Brasileiro de Geografia e Estatística (IBGE).
-Censo Demográfico 2022 - Agregados por Setores Censitários.
+## Ciência aberta e reprodutibilidade
 
-https://ftp.ibge.gov.br/Censos/Censo_Demografico_2022/Agregados_por_Setores_Censitarios/
+Este repositório busca favorecer a transparência metodológica, a rastreabilidade dos procedimentos e a reutilização responsável dos resultados científicos.
 
-### Reproducible workflow
+Os códigos e documentos são organizados por projeto. A disponibilização de conjuntos de dados dependerá das respectivas condições de uso, licenciamento, integridade e proteção de informações.
 
-The computational notebook is available at:
+Os conjuntos de dados finalizados poderão receber identificadores persistentes (DOI) por meio do Zenodo.
 
-https://github.com/PriscilaForcel/DOUTORADO
+## Contato e autoria
 
-The workflow was developed using Python and Google Colab,
-with supporting libraries including Pandas, PyArrow,
-and DuckDB.
+**Priscila Kauana Barelli Forcel**
 
-### Research context
+Programa de Pós-Graduação em Engenharia Urbana — Universidade Federal de São Carlos (UFSCar)
 
-This database was prepared within doctoral research in
-Urban Engineering at the Federal University of São Carlos
-(UFSCar), Brazil.
+ORCID: https://orcid.org/0000-0002-1321-4716
 
-Research funding: Fundação de Amparo à Pesquisa do Estado
-de São Paulo (FAPESP), grant 2025/08490-4.
+## Financiamento
 
-Related research context: Centro de Estudos da Favela
-(CEFAVELA), FAPESP grant 2022/12259-8.
+Esta pesquisa recebe apoio da Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP), por meio do processo nº **2025/08490-4**.
 
-### Citation and license
+A pesquisa possui vinculação científica com o Centro de Estudos da Favela (CEFAVELA), associado ao processo FAPESP nº **2022/12259-8**.
 
-The dataset DOI, formal citation, version, and distribution
-license will be added following final repository preparation
-and verification of source-data reuse conditions.
+As opiniões, hipóteses e conclusões expressas nos produtos de pesquisa são de responsabilidade de seus autores e não necessariamente refletem a visão da FAPESP ou das instituições envolvidas.
