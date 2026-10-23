@@ -16,7 +16,7 @@ A pesquisa investiga o potencial de técnicas interpretáveis de Aprendizado de 
 
 **Programa:** Programa de Pós-Graduação em Engenharia Urbana (PPGEU)
 
-**Financiamento:** Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP) — Processo nº 2025/08490-4.
+**Financiamento:** Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP), Processo nº 2025/08490-4.
 
 **Vinculação científica:** Centro de Estudos da Favela (CEFAVELA), associado ao processo FAPESP nº 2022/12259-8.
 
@@ -72,7 +72,7 @@ A integração dessas fontes será orientada pela compatibilidade territorial, t
 
 ## Projetos e bases de dados
 
-### 01 — Censo Demográfico 2022: Universo
+### 01 - Censo Demográfico 2022: Universo
 
 **Status:** Banco nacional integrado e validado, versão 1.0.0, disponibilizado no Zenodo.
 
