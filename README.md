@@ -4,11 +4,11 @@
 
 Este repositório reúne códigos, procedimentos metodológicos, documentação e produtos de pesquisa desenvolvidos no âmbito do doutorado em Engenharia Urbana da Universidade Federal de São Carlos (UFSCar).
 
-A pesquisa investiga a aplicação de métodos computacionais e inteligência artificial à estimativa e desagregação espacial do déficit habitacional brasileiro, com ênfase na escala dos setores censitários.
+A pesquisa investiga a aplicação de métodos computacionais e inteligência artificial à estimativa e desagregação do déficit habitacional brasileiro, com ênfase na escala dos setores censitários.
 
 ## Projeto de pesquisa
 
-**Título:** IA aplicada à estimativa do déficit habitacional no Brasil: abordagem multiescalar de desagregação por setor censitário.
+**Título:** Inteligência artificial aplicada à estimativa do déficit habitacional no brasil: uma abordagem multiescalar de desagregação por setor censitário
 
 **Pesquisadora:** Priscila Kauana Barelli Forcel
 
@@ -91,5 +91,3 @@ ORCID: https://orcid.org/0000-0002-1321-4716
 Esta pesquisa recebe apoio da Fundação de Amparo à Pesquisa do Estado de São Paulo (FAPESP), por meio do processo nº **2025/08490-4**.
 
 A pesquisa possui vinculação científica com o Centro de Estudos da Favela (CEFAVELA), associado ao processo FAPESP nº **2022/12259-8**.
-
-As opiniões, hipóteses e conclusões expressas nos produtos de pesquisa são de responsabilidade de seus autores e não necessariamente refletem a visão da FAPESP ou das instituições envolvidas.
