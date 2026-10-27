@@ -62,8 +62,8 @@ As etapas representam o plano metodológico da pesquisa. Sua inclusão neste REA
 
 A pesquisa considera principalmente:
 
-- **Censo Demográfico 2022 — Microdados da Amostra:** referência para a construção de estimativas do déficit habitacional por Área de Ponderação, conforme a disponibilidade de variáveis e as adaptações metodológicas necessárias.
-- **Censo Demográfico 2022 — Resultados do Universo:** fonte de informações demográficas, domiciliares e territoriais agregadas por setor censitário.
+- **Censo Demográfico 2022 - Microdados da Amostra:** referência para a construção de estimativas do déficit habitacional por Área de Ponderação, conforme a disponibilidade de variáveis e as adaptações metodológicas necessárias.
+- **Censo Demográfico 2022 - Resultados do Universo:** fonte de informações demográficas, domiciliares e territoriais agregadas por setor censitário.
 - **Malhas territoriais do IBGE:** referência para análises espaciais e compatibilização de unidades geográficas.
 - **Cadastro Único (CadÚnico):** fonte administrativa complementar, sujeita a condições de acesso, cobertura, qualidade e proteção das informações.
 - **Outras bases complementares:** registros administrativos, dados territoriais e fontes de sensoriamento remoto, conforme sua pertinência metodológica.
