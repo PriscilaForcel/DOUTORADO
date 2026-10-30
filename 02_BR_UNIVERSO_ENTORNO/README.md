@@ -16,7 +16,7 @@ This is a research-derived integration of official IBGE data. It is not an offic
 **Geographic coverage:** Brazil  
 **Spatial unit:** Census tract (*setor censitário*)  
 **Original dataset (V1):** https://doi.org/10.5281/zenodo.23599214  
-**V2 DOI:** To be added after publication on Zenodo.
+**V2 DOI:** https://doi.org/10.5281/zenodo.23821338
 
 ---
 
@@ -141,7 +141,7 @@ The `DOCUMENTACAO` directory contains the consolidated data dictionary in CSV an
 
 The `VALIDACAO` directory contains the technical report and the Excel workbook documenting the integrity checks performed.
 
-The national Parquet file is distributed through Zenodo rather than stored directly in GitHub.
+The national Parquet file is distributed through the [Version 2.0.0 Zenodo release](https://doi.org/10.5281/zenodo.23821338) rather than stored directly in GitHub.
 
 ### 7. Reproducibility
 
@@ -179,7 +179,9 @@ https://doi.org/10.5281/zenodo.23599214
 
 Please cite the corresponding Zenodo dataset record when using this database in research or other publications.
 
-The specific DOI and suggested citation for Version 2.0.0 will be added following its Zenodo publication.
+**Suggested citation (APA):**
+
+Forcel, P. K. B. (2026). *Brazilian Population Census 2022: Integrated National Dataset of Census Tract Aggregates - Urban Environment Extension (V2)* (Version 2.0.0) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.23821338
 
 **Original statistical data:** Instituto Brasileiro de Geografia e Estatística (IBGE), Censo Demográfico 2022.
 
