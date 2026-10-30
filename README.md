@@ -93,6 +93,35 @@ O conjunto constitui uma etapa de preparação de dados para análises posterior
 
 **Código e documentação:** [01_BR_UNIVERSO](./01_BR_UNIVERSO/)
 
+### 02 - Censo Demográfico 2022: Universo e Entorno dos Domicílios
+
+**Status:** Banco nacional ampliado e validado, versão 2.0.0, publicado no Zenodo em 30 de outubro de 2026.
+
+Este projeto constitui uma ampliação da versão original do Banco Nacional Integrado de Agregados por Setores Censitários do Censo Demográfico 2022. A nova versão incorpora as variáveis de **Características Urbanísticas do Entorno dos Domicílios**, disponibilizadas pelo Instituto Brasileiro de Geografia e Estatística (IBGE).
+
+A integração foi realizada a partir do banco nacional V1, mediante correspondência exata dos identificadores territoriais (`CD_SETOR`) e utilização da operação `LEFT JOIN`, preservando a totalidade dos registros e das variáveis originais.
+
+O conjunto integrado apresenta:
+
+- **468.099 setores censitários** de todo o Brasil.
+- **1.391 colunas**, incluindo identificadores territoriais e variáveis temáticas.
+- **35 novas variáveis** de Características Urbanísticas do Entorno dos Domicílios, identificadas pelo prefixo `ENT_`.
+- **340.965 setores censitários** com correspondência nos dados de Entorno.
+- **127.134 setores censitários** sem correspondência no conjunto de Entorno, preservados com valores nulos nas 35 variáveis acrescentadas.
+- Dicionário consolidado em CSV e Excel, relatório técnico e documentação das auditorias de integridade.
+
+A validação compreendeu a comparação das 1.355 variáveis originais entre as versões V1 e V2, distribuídas em 68 lotes, e das 35 novas variáveis com o arquivo original do IBGE, distribuídas em quatro lotes. **Não foram identificadas divergências nas comparações realizadas.**
+
+A ausência de correspondência nos dados de Entorno não deve ser interpretada como ausência de infraestrutura urbana. A interpretação das variáveis exige consulta aos dicionários e às notas metodológicas oficiais do IBGE.
+
+A V2 preserva a estrutura territorial da V1 e amplia o conjunto de atributos disponíveis para análises urbanas, habitacionais e socioespaciais. Assim como a versão original, não constitui, isoladamente, uma estimativa do déficit habitacional por setor censitário.
+
+**Base de dados no Zenodo:** https://doi.org/10.5281/zenodo.23821338
+
+**Código e documentação:** [02_BR_UNIVERSO_ENTORNO](./02_BR_UNIVERSO_ENTORNO/)
+
+**Versão original (V1):** https://doi.org/10.5281/zenodo.23599214
+
 Novos projetos, procedimentos de análise e produtos científicos poderão ser adicionados a este repositório conforme o desenvolvimento da pesquisa.
 
 ## Métodos e ferramentas computacionais
